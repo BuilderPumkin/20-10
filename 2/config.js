@@ -9,11 +9,14 @@
 
 window.CUSTOM_CONFIG = {
   // 1. Ảnh ghép hình trái tim (Cảnh 2)
-  puzzleHeartImage: './images/rose_bouquet.png',
+  puzzleHeartImage: './images/puzzle_heart.png',
 
   // 2. Danh sách ảnh kỷ niệm quay quanh hố đen (Cảnh 3) và khối cầu 3D (Cảnh 4)
   thumbnails: [
-    './images/rose_bouquet.png',
+    './images/photo1.png',
+    './images/photo2.png',
+    './images/photo3.png',
+    './images/photo4.png',
   ],
 
   // 3. Nội dung bức thư ở Cảnh 5
