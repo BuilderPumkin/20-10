@@ -17,6 +17,7 @@ window.CUSTOM_CONFIG = {
     './images/photo2.png',
     './images/photo3.png',
     './images/photo4.png',
+    './images/photo5.png',
   ],
 
   // 3. Nội dung bức thư ở Cảnh 5
