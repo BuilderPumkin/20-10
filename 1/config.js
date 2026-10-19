@@ -25,6 +25,11 @@ window.CUSTOM_CONFIG = {
     './images/photo7.jpg',
     './images/photo8.jpg',
     './images/photo9.jpg',
+    './images/photo10.png',
+    './images/photo11.png',
+    './images/photo12.png',
+    './images/photo13.png',
+    './images/photo14.jpg',
   ],
 
   // 3. Nội dung bức thư ở Cảnh 5
