@@ -9,21 +9,11 @@
 
 window.CUSTOM_CONFIG = {
   // 1. Ảnh ghép hình trái tim (Cảnh 2)
-  // Đặt ảnh của bạn vào thư mục images/ (ví dụ: heart.jpg) rồi điền đường dẫn './images/heart.jpg'
-  // Nếu để trống '', website sẽ tự hiển thị hình vẽ trái tim nghệ thuật mặc định.
-  puzzleHeartImage: './images/heart.jpg',
+  puzzleHeartImage: './images/rose_bouquet.png',
 
   // 2. Danh sách ảnh kỷ niệm quay quanh hố đen (Cảnh 3) và khối cầu 3D (Cảnh 4)
-  // Đặt các file ảnh của bạn vào thư mục images/ rồi khai báo ở đây (có thể thêm bớt tùy ý):
   thumbnails: [
-    './images/photo1.jpg',
-    './images/photo2.jpg',
-    './images/photo3.jpg',
-    './images/photo4.jpg',
-    './images/photo5.jpg',
-    './images/photo6.jpg',
-    './images/photo7.jpg',
-    './images/photo8.jpg',
+    './images/rose_bouquet.png',
   ],
 
   // 3. Nội dung bức thư ở Cảnh 5
