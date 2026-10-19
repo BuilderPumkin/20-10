@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiệp Chúc Mừng 20/10 - Bộ Sưu Tập Ngân Hà</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #05030D;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Hiệu ứng hào quang nền vũ trụ */
+    .cosmic-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 50% 40%, rgba(58, 26, 92, 0.45) 0%, rgba(5, 3, 13, 0.95) 75%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 24px;
+      border-radius: 30px;
+      background: rgba(244, 114, 182, 0.15);
+      border: 1px solid rgba(249, 203, 232, 0.35);
+      color: #F9CBE8;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 0 15px rgba(244, 114, 182, 0.2);
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(48px, 8vw, 76px);
+      color: #FFFFFF;
+      text-shadow: 0 0 25px rgba(249, 203, 232, 0.65), 0 0 10px rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    p.subtitle {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: #E2D9F3;
+      max-width: 650px;
+      margin: 0 auto 50px auto;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(25, 14, 38, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(249, 203, 232, 0.28);
+      border-radius: 24px;
+      padding: 38px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(244, 114, 182, 0.12) 0%, transparent 65%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(249, 203, 232, 0.65);
+      box-shadow: 0 20px 45px rgba(244, 114, 182, 0.25);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(244, 114, 182, 0.15);
+      border: 1px solid rgba(249, 203, 232, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 22px;
+      box-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
+    }
+
+    .card h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 14.5px;
+      color: #DACEEA;
+      line-height: 1.55;
+      margin-bottom: 28px;
+      flex-grow: 1;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 24px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #FF6097 0%, #E8788F 100%);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15.5px;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255, 96, 151, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .card-btn:hover {
+      background: linear-gradient(135deg, #FF4585 0%, #D8637B 100%);
+      transform: scale(1.02);
+      box-shadow: 0 8px 25px rgba(255, 96, 151, 0.5);
+    }
+
+    footer {
+      font-size: 13.5px;
+      color: #A99BC3;
+      margin-top: 30px;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cosmic-bg"></div>
+
+  <div class="container">
+    <div class="badge">✦ Mừng Ngày Phụ Nữ Việt Nam 20/10 ✦</div>
+    <h1>Bản Giao Hưởng Ngân Hà</h1>
+    <p class="subtitle">Mỗi thư mục là một bức thiệp tương tác 3D độc lập, chứa đựng hình ảnh và tâm tình riêng biệt dành tặng cho từng người phụ nữ yêu thương.</p>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon">🌹</div>
+        <h2>Nhi Cutee</h2>
+        <div class="card-desc">Thiệp tương tác vũ trụ với hình ảnh và bức thư ngọt ngào dành cho Nhi.</div>
+        <a href="./1/" class="card-btn">Mở thiệp Nhi Cutee ✨</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h2>Người Thương 2</h2>
+        <div class="card-desc">Bức thiệp ngập tràn sắc hoa và lời chúc thành công, may mắn, an nhiên.</div>
+        <a href="./2/" class="card-btn">Mở thiệp số 2 ✨</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-icon">💖</div>
+        <h2>Mẹ Yêu Thương</h2>
+        <div class="card-desc">Bức thiệp ấm áp chứa đựng lòng biết ơn và lời chúc sức khỏe dồi dào gửi đến Mẹ.</div>
+        <a href="./3/" class="card-btn">Mở thiệp số 3 ✨</a>
+      </div>
+    </div>
+
+    <footer>
+      Thiệp Tương Tác 20/10 • Sẵn sàng triển khai lên GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>

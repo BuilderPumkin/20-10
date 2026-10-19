@@ -1,0 +1,14 @@
+HƯỚNG DẪN THÊM VÀ THAY ĐỔI HÌNH ẢNH:
+------------------------------------------
+1. Ảnh ghép trái tim (Cảnh 2):
+   - Đặt file ảnh của bạn vào đây và đổi tên thành: heart.jpg (hoặc heart.png).
+   - Ảnh này sẽ được tự động cắt thành các mảnh ghép xếp hình trái tim.
+
+2. Ảnh kỷ niệm quay quanh hố đen và quả cầu 3D (Cảnh 3 & 4):
+   - Đặt các bức ảnh của bạn vào đây và đặt tên lần lượt:
+     photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg, photo5.jpg, photo6.jpg, photo7.jpg, photo8.jpg...
+   - Bạn có thể dùng định dạng .jpg, .png hoặc .webp.
+   - Nếu bạn muốn thêm nhiều ảnh hơn hoặc đổi tên khác, hãy mở file config.js ở thư mục bên ngoài và điền tên file tương ứng vào mục `thumbnails`.
+
+3. Lưu ý:
+   - Nếu bạn chưa có ảnh thật, website sẽ tự động hiển thị hình vẽ nghệ thuật pastel mặc định mà không bị lỗi.
